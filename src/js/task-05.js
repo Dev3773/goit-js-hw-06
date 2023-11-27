@@ -12,3 +12,4 @@ const targetValue = ((event) => {
 nameInput.addEventListener("input", targetValue);
 
 
+
