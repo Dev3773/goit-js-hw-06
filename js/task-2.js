@@ -15,10 +15,12 @@ class Storage {
 
   removeItem(itemToRemove) {
     const delElement = this.#items.indexOf(itemToRemove);
-    this.#items.splice(delElement, 1);
+    if (delElement !== -1) {
+      this.#items.splice(delElement, 1);
+    }
+    
   }
 }
-
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
